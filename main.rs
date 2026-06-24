@@ -1,3 +1,5 @@
+use std::io::{self, Read };
+
 fn main() {
     let a = 67;
     let b = 69;
@@ -11,4 +13,8 @@ fn main() {
     println!("{:^10} | {:^10} | {:^10}", c, c*67, c*6);
     println!("{:^10} | {:^10} | {:^10}", d, d*67, d*8);
     println!("{:^10} | {:^10} | {:^10}", e, e*67, e*10);
+
+    println!("\nНажмите Sigma Enter, чтобы выйти...");
+    let mut buffer = [0; 1];
+    let _ = io::stdin().read(&mut buffer);
 }
